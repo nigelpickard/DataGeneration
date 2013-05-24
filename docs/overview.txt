@@ -1,0 +1,16 @@
+Data Generation
+---------------
+
+A Data object contains the data generation date and the coordinate(s) value of that data.
+
+Each DataSet contains DataInformation and a set of Data.
+
+Relationships
+-------------
+
+				DataSet 
+			1	/   \ 1
+			   /     \
+			  /       \
+		   1 /         \ 0..*
+	DataInformation     Data

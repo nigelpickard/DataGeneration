@@ -2,22 +2,23 @@ package com.npickard.data;
 
 import java.util.Date;
 
-public class Data2d extends Data1d {
+public class Data1d extends Data {
 
-	protected final int y;
+	protected final int x;
 	
-	public Data2d(Date generationDate, int x, int y){
-		super(generationDate, x);
-		this.y = y;
+	public Data1d(Date generationDate, int x){
+		super(generationDate);
+		this.x = x;	
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result + y;
+		result = prime * result + x;
 		return result;
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -27,15 +28,16 @@ public class Data2d extends Data1d {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Data2d other = (Data2d) obj;
-		if (y != other.y)
+		Data1d other = (Data1d) obj;
+		if (x != other.x)
 			return false;
 		return true;
 	}
 
+
 	@Override
 	public String toString(){
-		return super.toString() + (", y=" + y);
+		return super.toString() + (", x=" + x);
 	}
 
 }

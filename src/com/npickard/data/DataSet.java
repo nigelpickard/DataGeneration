@@ -12,7 +12,7 @@ import org.apache.log4j.Logger;
  * @author nigel
  *
  */
-public class DataSet {
+public class DataSet<T extends Data> {
 	static Logger logger = Logger.getLogger(DataSet.class);
 
 	private final DataInformation dataInformation;
@@ -26,7 +26,7 @@ public class DataSet {
 	 * and use the SortedSet to sort the elements by date
 	 * 
 	 */
-	private final SortedSet<Data> dataSet = new TreeSet<Data>(); 
+	private final SortedSet<T> dataSet = new TreeSet<T>(); 
 	
 	public DataSet(DataInformation dataInformation){
 		this.dataInformation = dataInformation;
@@ -36,7 +36,7 @@ public class DataSet {
 		return dataInformation;
 	}
 
-	public SortedSet<Data> getDataSet() {
+	public SortedSet<T> getDataSet() {
 		return dataSet;
 	}
 
@@ -44,13 +44,14 @@ public class DataSet {
 	 * adds a data object to the data set.
 	 * @param data
 	 */
-	public void addData(Data data){
+	public void addData(T data){
 		if (dataSet.contains(data)){
 			logger.warn("Unable to add data " +  data.toString() + " to dataset; it is already in the dataset.");
 		}else{
 			dataSet.add(data);
 		}
 	}
+
 
 	@Override
 	public int hashCode() {
@@ -88,8 +89,9 @@ public class DataSet {
 		if (dataSet==null ||  dataSet.size() <1){
 			logger.warn("Data set is null or empty.");
 		}else{
+			logger.info(dataInformation.toString());
 			logger.info("Number of data in dataset is " + dataSet.size());
-			for (Data data : dataSet){
+			for (T data : dataSet){
 				logger.info(data.toString());
 			}
 		}

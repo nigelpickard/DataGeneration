@@ -5,7 +5,7 @@ import java.util.Date;
 public class Data3d extends Data2d {
 	
 	protected final int z;
-	
+
 	public Data3d(Date generationDate, int x, int y, int z){
 		super(generationDate, x, y);
 		this.z = z;
