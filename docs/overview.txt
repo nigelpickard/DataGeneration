@@ -14,3 +14,26 @@ Relationships
 			  /       \
 		   1 /         \ 0..*
 	DataInformation     Data
+
+	
+Inheritance
+-----------
+				 Data
+				   |
+				  /\   
+			       |   
+				Data1d
+				   |
+				  /\
+				   |
+				Data2d
+				   |
+				  /\
+				   |
+				Data3d
+
+Phase 1
+-------
+1. Generate data (10 2d data)
+
+	

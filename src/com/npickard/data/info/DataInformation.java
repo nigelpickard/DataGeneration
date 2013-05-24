@@ -1,4 +1,4 @@
-package com.npickard.data;
+package com.npickard.data.info;
 
 public interface DataInformation {
 	

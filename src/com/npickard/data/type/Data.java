@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.npickard.data;
+package com.npickard.data.type;
 
 import java.util.Date;
 

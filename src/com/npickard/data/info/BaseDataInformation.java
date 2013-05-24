@@ -1,4 +1,4 @@
-package com.npickard.data;
+package com.npickard.data.info;
 
 public class BaseDataInformation implements DataInformation{
 	protected String name;

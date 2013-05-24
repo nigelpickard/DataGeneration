@@ -1,21 +1,22 @@
-package com.npickard.data;
+package com.npickard.data.type;
 
 import java.util.Date;
 
-public class Data2d extends Data1d {
 
-	protected final int y;
+public class Data3d extends Data2d {
 	
-	public Data2d(Date generationDate, int x, int y){
-		super(generationDate, x);
-		this.y = y;
+	protected final int z;
+
+	public Data3d(Date generationDate, int x, int y, int z){
+		super(generationDate, x, y);
+		this.z = z;
 	}
 	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result + y;
+		result = prime * result + z;
 		return result;
 	}
 
@@ -27,15 +28,14 @@ public class Data2d extends Data1d {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Data2d other = (Data2d) obj;
-		if (y != other.y)
+		Data3d other = (Data3d) obj;
+		if (z != other.z)
 			return false;
 		return true;
 	}
-
+	
 	@Override
 	public String toString(){
-		return super.toString() + (", y=" + y);
+		return super.toString() + (", z=" + z);
 	}
-
 }
