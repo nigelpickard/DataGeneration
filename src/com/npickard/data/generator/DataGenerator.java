@@ -6,5 +6,5 @@ import com.npickard.data.type.Data;
 
 public interface DataGenerator {
 
-	public DataSet generateDataSet(DataInformation dataInformation, int numData, Class clazz) throws Exception;
+	public DataSet<? extends Data> generateDataSet(DataInformation dataInformation, int numData, Class clazz) throws Exception;
 }

@@ -34,6 +34,13 @@ Inheritance
 
 Phase 1
 -------
-1. Generate data (10 2d data)
+1. Generate data (can 1d, 2d, or 3d data, of any number of rows)
+
+Phase 2
+-------
+2. Persist generated data to a database in 3 ways:
+	i. 3 tables each for different kind of data
+	i. table with determinator
+	ii. table with sub tables to represent inheritance
 
 	

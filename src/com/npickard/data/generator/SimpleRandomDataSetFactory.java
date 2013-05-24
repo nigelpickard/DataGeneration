@@ -38,7 +38,7 @@ public class SimpleRandomDataSetFactory implements DataGenerator{
 	}
 
 	@Override
-	public DataSet generateDataSet(DataInformation dataInformation, int numData, Class clazz) throws Exception {
+	public DataSet<? extends Data> generateDataSet(DataInformation dataInformation, int numData, Class clazz) throws Exception {
 		if (Data1d.class.equals(clazz)){
 			logger.info("Data set is 1d data");
 			return generateData1dSet(dataInformation, numData);

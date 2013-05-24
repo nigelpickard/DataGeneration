@@ -11,6 +11,7 @@ import com.npickard.data.generator.SimpleRandomDataSetFactory;
 import com.npickard.data.info.Data1dInformation;
 import com.npickard.data.info.Data2dInformation;
 import com.npickard.data.info.Data3dInformation;
+import com.npickard.data.type.Data;
 import com.npickard.data.type.Data1d;
 import com.npickard.data.type.Data2d;
 import com.npickard.data.type.Data3d;
@@ -38,7 +39,7 @@ public class App {
 		logger.info("Data Generation application is started.");
 		
 		try {
-			DataSet<Data1d> dataSet1d = SimpleRandomDataSetFactory.getInstance().generateDataSet(new Data1dInformation("New 1d data"), 10, Data1d.class);
+			DataSet<? extends Data> dataSet1d = SimpleRandomDataSetFactory.getInstance().generateDataSet(new Data1dInformation("New 1d data"), 10, Data1d.class);
 			dataSet1d.showData();
 		} catch (Exception e) {
 			logger.error(e.toString());
@@ -46,7 +47,7 @@ public class App {
 		}
 
 		try {
-			DataSet<Data2d> dataSet2d = SimpleRandomDataSetFactory.getInstance().generateDataSet(new Data2dInformation("New 2d data"), 10, Data2d.class);
+			DataSet<? extends Data> dataSet2d = SimpleRandomDataSetFactory.getInstance().generateDataSet(new Data2dInformation("New 2d data"), 10, Data2d.class);
 			dataSet2d.showData();
 		} catch (Exception e) {
 			logger.error(e.toString());
@@ -54,7 +55,7 @@ public class App {
 		}
 
 		try {
-			DataSet<Data3d> dataSet3d = SimpleRandomDataSetFactory.getInstance().generateDataSet(new Data3dInformation("New 3d data"), 10, Data3d.class);
+			DataSet<? extends Data> dataSet3d = SimpleRandomDataSetFactory.getInstance().generateDataSet(new Data3dInformation("New 3d data"), 10, Data3d.class);
 			dataSet3d.showData();
 		} catch (Exception e) {
 			logger.error(e.toString());
