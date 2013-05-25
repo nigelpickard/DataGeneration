@@ -5,10 +5,18 @@ import java.util.Date;
 
 public class Data2d extends Data1d {
 
-	protected final int y;
+	protected int y;
 	
 	public Data2d(Date generationDate, int x, int y){
 		super(generationDate, x);
+		this.y = y;
+	}
+	
+	public int getY(){
+		return y;
+	}
+	
+	public void setY(int y){
 		this.y = y;
 	}
 	

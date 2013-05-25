@@ -7,10 +7,6 @@ public class Data1d extends Data {
 
 	protected int x;
 	
-	public Data1d(){
-		
-	}
-	
 	public Data1d(Date generationDate, int x){
 		super(generationDate);
 		this.x = x;	
