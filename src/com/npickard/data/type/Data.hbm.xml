@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.npickard.data.type.Data" table="GENERATED_DATA" catalog="hibernatedb">
+       
+       	<id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        
+        <discriminator column="DATA_TYPE"  type="string"/>
+        
+        <property name="generationDate" type="date">
+            <column name="GENERATED_DATE" length="20" not-null="true" />
+        </property>
+        
+        <subclass name="com.npickard.data.type.Data1d" discriminator-value="1d">
+        	<property name="x" column="X"/>
+        </subclass>
+
+
+
+
+        
+    </class>
+</hibernate-mapping>

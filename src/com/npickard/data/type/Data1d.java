@@ -5,13 +5,27 @@ import java.util.Date;
 
 public class Data1d extends Data {
 
-	protected final int x;
+	protected int x;
+	
+	public Data1d(){
+		
+	}
 	
 	public Data1d(Date generationDate, int x){
 		super(generationDate);
 		this.x = x;	
 	}
 
+	
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x){
+		this.x = x;
+	}
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

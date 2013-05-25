@@ -20,8 +20,8 @@ public class HibernateUtil {
             Configuration configuration = new Configuration().configure();
             
             //add classes here
-            //configuration.addClass(com.npickard.helloworld.Message.class);
-            //configuration.addClass(com.npickard.hibernate.common.Customer.class);
+            configuration.addClass(com.npickard.data.type.Data.class);
+            //configuration.addClass(com.npickard.data.type.Data1d.class);
             
             
             serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();

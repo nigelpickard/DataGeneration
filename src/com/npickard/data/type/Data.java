@@ -13,12 +13,21 @@ import org.apache.log4j.Logger;
  */
 public class Data implements Comparable<Data>{
 	static Logger logger = Logger.getLogger(Data.class);
-	
+	protected Long id;
 	protected Date generationDate;
 	
 	public Data(){
 	}
 	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+
 	public Data(Date generationDate){
 		this.generationDate = generationDate;
 	}
